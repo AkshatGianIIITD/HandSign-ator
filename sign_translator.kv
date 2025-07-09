@@ -1,0 +1,88 @@
+<SignTranslatorKivy>:
+    orientation: 'vertical'
+    spacing: dp(10)
+    padding: dp(20)
+
+    canvas.before:
+        Color:
+            rgba: 0.08, 0.08, 0.12, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    # Title Bar
+    BoxLayout:
+        size_hint_y: None
+        height: dp(50)
+        canvas.before:
+            Color:
+                rgba: 0.02, 0.02, 0.04, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Label:
+            text: '🔮 Sign Translator'
+            bold: True
+            color: 0.4, 0.8, 1, 1
+            font_size: '20sp'
+
+    # Camera Feed
+    Image:
+        id: camera_feed
+        size_hint_y: 0.75
+        allow_stretch: True
+        keep_ratio: True
+        canvas.before:
+            Color:
+                rgba: 0.1, 0.6, 1, 0.2
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [dp(20),]
+        canvas.after:
+            Color:
+                rgba: 0.1, 0.6, 1, 0.5
+            Line:
+                width: dp(3)
+                rounded_rectangle: (self.x, self.y, self.width, self.height, dp(20))
+
+    # Controls
+    BoxLayout:
+        size_hint_y: None
+        height: dp(50)
+        spacing: dp(10)
+        Button:
+            text: 'Clear'
+            id: clear_btn
+            background_normal: ''
+            background_color: 0.1, 0.1, 0.15, 1
+            color: 0.4, 0.8, 1, 1
+            on_release: root.clear_text()
+        Button:
+            text: 'Pause'
+            id: pause_btn
+            background_normal: ''
+            background_color: 0.1, 0.1, 0.15, 1
+            color: 0.4, 0.8, 1, 1
+            on_release: root.toggle_pause()
+
+    # Text Output (using Label)
+    BoxLayout:
+        size_hint_y: 0.15
+        canvas.before:
+            Color:
+                rgba: 0.05, 0.05, 0.08, 1
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [dp(15),]
+        Label:
+            id: result_text
+            text: ''
+            valign: 'middle'
+            halign: 'center'
+            text_size: self.width - dp(30), None
+            size_hint_y: None
+            height: self.texture_size[1]
+            color: 0, 1, 1, 1
+            font_size: '18sp'
