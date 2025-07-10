@@ -102,7 +102,7 @@ Click the **Sign to Text** button to open the dedicated window. This feature is 
 * **"Speak" Button:** Use the **Speak** button to have the generated text read aloud.  
 * **"Clear" Button:** The **Clear** button resets the text area, allowing for fresh input.
 
-![Sign to Text Demo](demo_2.mp4)
+![Sign to Text Demo](https://drive.google.com/file/d/1jytnRHUC5LRaVTzNOSF7JQqRGuavR0mA/view?usp=sharing)
 
 #### **Text to Sign Feature**
 
@@ -113,7 +113,7 @@ From the Homepage, click the **Text to Sign** button to open its respective wind
 * **"Show Sign Language" Button:** After entering text or speaking, click the **Show Sign Language** button. The app will then display the corresponding sign language for your input.  
 * **Multimodal Communication:** This feature enables efficient communication through sign language using both written and spoken input. (For a demonstration, please refer to demo\_3 if available.)
 
-![Text to Sign Demo](demo_3.mp4)
+![Text to Sign Demo](https://drive.google.com/file/d/1zZ_879s1-jEwlWzWnwgpfLHuZgPgwlKd/view?usp=sharing)
 
 ## **Technologies Used**
 
